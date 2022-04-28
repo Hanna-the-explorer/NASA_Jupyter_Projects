@@ -1,0 +1,26 @@
+module load anaconda3-2020.11-gcc-9.2.0-gejxk2b
+source activate bugs
+
+module load SeaDas/8.1.0
+seadas
+
+Add this to home directory? 
+echo "machine urs.earthdata.nasa.gov login hbridgham2021 password Hmlb2020"
+~/.netrc > 
+~/.urs_cookies chmod  0600 
+~/.netrc
+
+##add the AppKey as a parameter by appending it to the end of the download URL. For example, if the url is:
+##https://oceandata.sci.gsfc.nasa.gov/ob/getfile/
+##https://oceandata.sci.gsfc.nasa.gov/ob/getfile/?appkey=abcd1234
+
+nasa app ket is : 6c2506cf385dadbb3b6b14fb776cceda429ed695
+?appkey=6c2506cf385dadbb3b6b14fb776cceda429ed695
+
+obdaac_download [--http_manifest HTTP_MANIFEST] [--appkey 6c2506cf385dadbb3b6b14fb776cceda429ed695]
+	#--filelist FILELIST - file containing list of filenames to retrieve, one per line
+obdaac_download [filename] [--appkey 6c2506cf385dadbb3b6b14fb776cceda429ed695]
+	#filename - name of the file (or the URL of the file) to retrieve
+wget --user=USERNAME --ask-password --auth-no-challenge=on https://oceandata.sci.gsfc.nasa.gov/ob/getfile/T2017004001500.L1A_LAC.bz2
+
+wget --user=hbridgham2021 --ask-password --auth-no-challenge=on https://oceandata.sci.gsfc.nasa.gov/cgi/getfile/requested_files_1.tar?h=ocdist301&p=/data1/60c0632796dc146c/requested_files?appkey=6c2506cf385dadbb3b6b14fb776cceda429ed695
